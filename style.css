@@ -1,0 +1,56 @@
+
+
+.box {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+
+}
+
+.black {
+    background-color: black;
+}
+
+.white {
+    position: relative;
+    background-color: white;
+    top: -240px;
+    left: 50px
+}
+
+.moon {
+    padding-top: 50px;
+    border: 2px solid;
+    height: 250px;
+}
+
+.left, .right {
+    background-color: black;
+    display: inline-block;
+}
+
+.right {
+    position: relative;
+    right: 50px
+}
+
+.triangle {
+    background-color: black;
+    height: 200px;
+    width: 200px;
+    rotate: 45deg;
+    position: relative;
+    left: 77px;
+    bottom: 130px
+}
+
+body {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.container {
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: center;
+}

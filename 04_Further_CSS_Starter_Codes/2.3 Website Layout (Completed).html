@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Website</title>
+
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      .container {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+          "Logo Header Header Header Header"
+          "Navigation Navigation Navigation Navigation Navigation"
+          "Sidebar Content Content Content Content"
+          "Sidebar Content Content Content Content"
+          "Footer Footer Footer Footer Footer";
+      }
+
+      .Item {
+        border: 1px solid black;
+      }
+
+      .Header {
+        grid-area: Header;
+      }
+
+      .Logo {
+        grid-area: Logo;
+      }
+
+      .Navigation {
+        grid-area: Navigation;
+      }
+
+      .Sidebar {
+        grid-area: Sidebar;
+      }
+
+      .Footer {
+        grid-area: Footer;
+      }
+
+      .Content {
+        grid-area: Content;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="Item Header">Header</div>
+      <div class="Item Logo">Logo</div>
+      <div class="Item Navigation">Navigation</div>
+      <div class="Item Sidebar">Sidebar</div>
+      <div class="Item Footer">Footer</div>
+      <div class="Item Content">Content</div>
+    </div>
+  </body>
+</html>
