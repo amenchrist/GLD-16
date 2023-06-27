@@ -117,7 +117,7 @@ footer> div {
 }
 
 .showcase-image {
-    width: 250px;
+    width: 200px;
 }
 
 .min-hero{ 
@@ -136,5 +136,10 @@ footer> div {
 
 .watches {
     background-image: url(./assets/watches/Desktop_bestsellers2023-2.jpg) ;
+    background-size: cover;  
+}
+
+.jewelry {
+    background-image: url(./assets//jewelry/Desktop_alljewelry_BTCeramic.jpg) ;
     background-size: cover;  
 }

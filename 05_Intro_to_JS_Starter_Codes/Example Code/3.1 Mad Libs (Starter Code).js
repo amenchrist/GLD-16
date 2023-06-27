@@ -1,0 +1,9 @@
+/*
+
+He sensed a [noun] drifting through the basement, soundless and [adjective], moving toward him. He turned and [past tense verb] up the stairs, taking them [number] at a time, landing heavily with each step. [sound], a board cracked, and Liam [past tense verb], slamming his [body part] hard against the wood. He grabbed the top stair, catching himself before he fell. He wheezed, felt dizzy, woozy. Liam's [adjective] leg dangled in the air, kicking at nothingness. He felt a thin, [adverb] grip around his ankle. Like a claw pulling, dragging him down. Liam yanked his leg free, lifted himself up, gasping for air, and [past tense verb] to the top of the stairs. He crawled into the [noun], into the light. He slammed the door shut behind him, twisted the lock, heart thundering. 
+
+*/
+
+let noun, adjective, pastTenseVerb, number, sound, bodyPart, adverb;
+
+console.log("He sensed a", noun,"drifting through the basement, soundless and",adjective,", moving toward him. He turned and", pastTenseVerb,"up the stairs, taking them",number, "at a time, landing heavily with each step.",sound,", a board cracked, and Liam",pastTenseVerb,", slamming his", bodyPart,"hard against the wood. He grabbed the top stair, catching himself before he fell. He wheezed, felt dizzy, woozy. Liam's ",adjective," leg dangled in the air, kicking at nothingness. He felt a thin,", adverb,"grip around his ankle. Like a claw pulling, dragging him down. Liam yanked his leg free, lifted himself up, gasping for air, and", pastTenseVerb,"to the top of the stairs. He crawled into the",noun,", into the light. He slammed the door shut behind him, twisted the lock, heart thundering. ")
