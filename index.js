@@ -29,23 +29,47 @@
 
 // dog? console.log("pet dog") : console.log("locate dog")
 
-let score = Math.ceil(Math.random()*100)
-let grade = "UNKNOWN"
+// let score = Math.ceil(Math.random()*100)
+// let grade = "UNKNOWN"
 
-if(grade <= 39){
-    grade = 'F'
-} else if(score >= 40){
-    grade = 'D'
-} else if(score >= 50){
-    grade = 'C'
-} else if(score >= 70){
-    grade = 'B'
-}
-else if(score >= 80){
-    grade = 'A'
-}
- else {
-    grade = "UNKNOWN"
+// if(grade <= 39){
+//     grade = 'F'
+// } else if(score >= 40){
+//     grade = 'D'
+// } else if(score >= 50){
+//     grade = 'C'
+// } else if(score >= 70){
+//     grade = 'B'
+// }
+// else if(score >= 80){
+//     grade = 'A'
+// }
+//  else {
+//     grade = "UNKNOWN"
+// }
+
+// console.log(score, "is an", grade)
+
+let dailySleepAvg = 2
+
+function sleepCalculator(hours) {
+    isSleepingEnough(hours) ? console.log(`Congrats! You are getting enough sleep!`) : console.log(`Get some sleep mate! You need ${sleepDebt(hours)} more hours`)
 }
 
-console.log(score, "is an", grade)
+function getTotalWeekSleep(avgSleepHrs){ 
+    return avgSleepHrs * 7
+}
+
+function getRecommendedSleep() {
+    const recommendedSleepPerDay = 8;
+    return recommendedSleepPerDay * 7
+}
+function isSleepingEnough(hrs){
+    return getTotalWeekSleep(hrs) >= getRecommendedSleep()
+}
+
+function sleepDebt(hrs){
+    return getRecommendedSleep() - getTotalWeekSleep(hrs)
+}
+
+sleepCalculator(dailySleepAvg)
