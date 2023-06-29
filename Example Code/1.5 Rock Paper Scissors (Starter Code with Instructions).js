@@ -3,6 +3,10 @@ The user should be able to choose ‘rock’, ‘paper’, or ‘scissors’ whe
 Using const and arrow function syntax, create a function named getUserChoice that takes a single parameter userInput.
 */
 
+
+
+
+
 /* STEP 2:
 Since a user can pass in a parameter, such as ‘Rock’ or ‘rock’ with different capitalisations, begin by utilizing JavaScript’s toLowerCase() function to make the userInput all lowercase.
 */
@@ -18,11 +22,110 @@ Now we need to have the computer make a choice.
 Create a new function named getComputerChoice with no parameters. Inside its block, utilize Math.random() and Math.floor() to get a whole number between 1 and 3. Then, depending on the number, return either 'rock', 'paper', or 'scissors'.
 */
 
+
+
+
+
 /* STEP 5:
 Now it’s time to determine a winner.
 Create a function named determineWinner that takes two parameters named userChoice and computerChoice. This function will compare the two choices played and then return if the human player won, lost, or tied.
 Let’s deal with the tie condition first. Within the determineWinner() function, write an if statement that checks if the userChoice parameter equals the computerChoice parameter. If so, return a string that the game was a tie.
 */
+
+// const getUserChoice = () => {
+
+//     const userRandomNum = Math.ceil(Math.random()*4)
+
+//     let userChoice = ""
+   
+//     switch (userRandomNum){
+//         case 1: userChoice = "ROCK";
+//         break;
+//         case 2: userChoice = "PAPER";
+//         break;
+//         case 3: userChoice = "SCISSORS";
+//         break;
+//         default: userChoice = "DRAGON"
+//     }
+//     console.log("You played", userChoice)
+//     return userChoice
+// }
+
+
+// const getComputerChoice = () => {
+
+//     const userRandomNum = Math.ceil(Math.random()*3)
+
+//     let choice = ""
+   
+//     switch (userRandomNum){
+//         case 1: choice = "ROCK";
+//         break;
+//         case 2: choice = "PAPER";
+//         break;
+//         case 3: choice = "SCISSORS";
+//         break;
+//         default: choice = "DRAGON"
+//     }
+    
+//     console.log("Computer played", choice)
+//     return choice
+// }
+
+const getChoice = () => {
+
+    const userRandomNum = Math.ceil(Math.random()*4)
+
+    let choice = ""
+    switch (userRandomNum){
+        case 1: choice = "ROCK";
+        break;
+        case 2: choice = "PAPER";
+        break;
+        case 3: choice = "SCISSORS";
+        break;
+        default: choice = "DRAGON"
+    }
+    return choice
+}
+
+function determineWinner(userC, compC) {
+
+    let outcome = ''
+    switch(true){
+        case userC === compC: outcome = `It's a Tie!`;
+        break;
+        case userC === "DRAGON" : outcome = `You win!`;
+        break
+        case compC === "DRAGON" : outcome = `Computer Wins!`;
+        break;
+        case userC === "PAPER" && compC === "ROCK" : outcome = `You win!`;
+        break
+        case userC === "ROCK" && compC === "SCISSORS"  : outcome = `You win!`;
+        break
+        case userC === "SCISSORS" && compC === "PAPER" : outcome = `You win!`;
+        break
+        case userC === "SCISSORS" && compC === "ROCK" : outcome = `Computer Wins!`;
+        break
+        case userC === "ROCK" && compC === "PAPER" : outcome = `Computer Wins!`;
+        break
+        case userC === "PAPER" && compC === "SCISSORS" : outcome = `Computer Wins!`;
+        break
+        default: `It's a TIE!!!`
+    }
+
+    return outcome
+}
+
+function playGame () {
+    const userChoice = getChoice();
+    const computerChoice = getChoice()
+    console.log(`You played ${userChoice}`)
+    console.log(`Computer played ${computerChoice}`)
+    console.log(determineWinner(userChoice, computerChoice))
+}
+
+playGame()
 
 /* STEP 6: 
 If the game is not a tie, you’ll need to determine a winner.
