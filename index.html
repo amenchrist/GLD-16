@@ -3,24 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>JS Practice</title>
 </head>
 <body>
     
 
-    <div class="container">
-        <h1 id="heading">Hello World</h1>
-        <ul>
-            <li class="my-list">List Item 1</li>
-            <li class="my-list">List Item 2</li>
-            <li class="my-list">List Item 3</li>
-            <li class="my-list">List Item 4</li>
-            <li class="my-list">
-                <a href="http://www.google.co.uk/" target="_blank">Google.co.uk</a>
-            </li>
-        </ul>
-    </div>
+    <form id="form1" action="#" onsubmit="return alertUser()">
+        <h3>Choose your favorite Ice-cream</h3>
+        
+        <label>Vanilla
+            <input type="radio" name="ice-cream flavours" value="Vanilla">
+        </label>
+        <br>
+        <label>Chocolate
+            <input type="radio" name="ice-cream flavours" value="Chocolate">
+        </label>
+        <br>
+        <label>Mint
+            <input type="radio" name="ice-cream flavours" value="Mint">
+        </label>
+        <br>
+        <label>Strawberry
+            <input type="radio" name="ice-cream flavours" value="Strawberry">
+        </label>
+        <br>
+        <label>Pistachio
+            <input type="radio" name="ice-cream flavours" value="Pistachio">
+        </label>
+        <br>       
+        <input type="submit" name="" id="">
+    </form>
 
+    <script>
+        function alertUser(){
+
+            let iceCreamChoices = document.getElementsByName("ice-cream flavours")
+            // console.log(iceCreamChoices)
+            for (const i in iceCreamChoices){
+                console.log(iceCreamChoices[i])
+                if (iceCreamChoices[i].checked){
+                    alert(`Hello ${fname} ${lname}! Your email address has been added!`)
+                }
+            }
+            
+        }
+    </script>
 
 </body>
 </html>

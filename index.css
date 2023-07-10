@@ -1,0 +1,30 @@
+.container,
+.sun,
+.moon {
+font-size: 7rem;
+display: flex;
+justify-content: center;
+}
+
+.text {
+font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.nav {
+font-size: 2rem;
+font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+text-align: right;
+}
+
+input[type="checkbox"] {
+height: 25px;
+width: 25px;
+}
+
+
+/* CREATE DARK MODE CSS HERE*/
+
+.dark{
+    background-color: black;
+    color: white;
+}

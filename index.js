@@ -130,15 +130,63 @@
 
 // console.log(whaleTalk.join(""))
 
-let phrase = "a flat white is not a small latte";
+// let phrase = "a flat white is not a small latte";
 
-const vowels = ["a", "e", "i", "o", "u"]
+// const vowels = ["a", "e", "i", "o", "u"]
 
-let whaleTalk = [];
+// let whaleTalk = [];
 
-for(const letter of phrase){
-    if (vowels.includes(letter)){
-        whaleTalk.push(letter)
+// for(const letter of phrase){
+//     if (vowels.includes(letter)){
+//         whaleTalk.push(letter)
+//     }
+// }
+// console.log(whaleTalk.join(""))
+
+// const fonts = [ "arial", "times new roman", "calibri", "impact", "display", "monospace", "serif", "sans-serif"]
+
+// const heading = document.querySelector('#heading');
+// const text = document.querySelector('#text')
+// const btn = document.querySelector('#color-btn');
+
+// const hex = [0,1,2,3,4,5,6,7,8,9,'a','b','c','d','e','f']
+
+// btn.addEventListener('click', () => {
+
+//     // const r = Math.ceil(Math.random()*255)
+//     // const g = Math.ceil(Math.random()*255)
+//     // const b = Math.ceil(Math.random()*255)
+//     // text.style.color = `rgb(${r},${g},${b})`;
+
+//     const a = hex[Math.floor(Math.random()*16)];
+//     const b = hex[Math.floor(Math.random()*16)]
+//     const c = hex[Math.floor(Math.random()*16)]
+//     const d = hex[Math.floor(Math.random()*16)]
+//     const e = hex[Math.floor(Math.random()*16)]
+//     const f = hex[Math.floor(Math.random()*16)]
+
+//     let color = `#${a}${b}${c}${d}${e}${f}`
+
+//     heading.style.color = color;
+//     text.textContent = color
+
+//     const font = fonts[Math.floor(Math.random()*fonts.length)];
+//     heading.style.fontFamily = font
+// })
+
+
+
+/* CREATE YOUR SCRIPT HERE*/
+function goDark(){
+
+    const darkModeChkBx = document.getElementById('dark-mode')
+    const body = document.getElementsByTagName('body')[0]
+    document.get
+
+    if (darkModeChkBx.checked) {
+      body.classList.add('dark')
+    } else {
+      body.classList.remove('dark')
     }
-}
-console.log(whaleTalk.join(""))
+  }
+
