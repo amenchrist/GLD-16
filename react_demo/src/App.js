@@ -1,48 +1,52 @@
 import './App.css'
-import React,{ useState } from 'react';
-
+import React,{ useState, useEffect } from 'react';
+import DeleteButton from './Components/DeleteButton';
+import { timeStamp, countWords } from './functions';
+import NoteCard from './Components/NoteCard/NoteCard';
+import NoteForm from './Components/NoteForm';
 
 function App() {
 
-  const [ commented, setCommented ] = useState(false)
+  
+  const [ notes, setNotes ] = useState(() => {
+    const localList = localStorage.getItem("notes")
 
-  function submit() {
-    setCommented(true)
-  }
+    if (localList === null ){
+      return []
+    } else {
+      return JSON.parse(localList)
+    }
+  })
 
-  function ThankYou () {
-    return (
-      <h1>Thank you for your Comment</h1>
-    )
-  }
+  useEffect(()=> {
+    localStorage.setItem("notes", JSON.stringify(notes))
+  }, [notes])
 
-  function CommentForm() {
-    return (
-      <>
-      <div style={divStyle}>
-        <h3>Leave a comment</h3>
-        <input type='text' placeholder='First Name' />
-        <br/>
-        <input type='email' placeholder='Email' />
-        <br/>
-        <textarea placeholder='Comments' />
-        <br/>
-        <button onClick={submit}>Submit</button>
-      </div> 
-    </>
-    )
-  }
 
-  const divStyle = {
-    padding: '50px'
+
+
+  function setCurrentNote(id) {
+    // if(note.content.trim() !== ""){
+    //   window.alert("This action will delete the current note!")
+    //   return
+    // }
+
+    // setNote(notes.find( e => e.id === id ));
+    // setCount(notes.find( e => e.id === id ).wordCount)
+    // setNotes(notes.filter(e => e.id !== id))
 
   }
+
 
   return (
-    <>  
-      <div style={divStyle}>
-      {commented? <ThankYou /> : <CommentForm /> }
-      </div> 
+    <>
+      <div className='app'>        
+        <NoteForm notes={notes} setNotes={setNotes} />
+       
+        <div className='container'>   
+          {notes.map((n,i) => <NoteCard note={n} key={i} notes={notes} setNotes={setNotes} setCurrentNote={setCurrentNote}   />)}
+        </div>
+      </div>
     </>
   );
 }

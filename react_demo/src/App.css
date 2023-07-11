@@ -1,3 +1,29 @@
-table, th, td {
-  border: 1px solid black;
+p {
+  font-family: 'Headland One', serif;
+}
+
+h1 {
+  font-family: 'Manrope', sans-serif;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center
+}
+
+.title {
+  text-align: center;
+}
+
+body {
+  background-image: linear-gradient(#696764, white);
+  background-repeat: no-repeat
 }
