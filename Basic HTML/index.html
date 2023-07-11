@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+</head>
+<body>
+    <h1>To DO</h1>
+    <input type="text" id="input">
+    <input type="submit" id="sBtn">
+    <hr>
+    <br>
+    <h4>List of things</h4>
+    <ul id="list">
+        <li id="item1">Item 1...(click to strikethrough)</li>
+    </ul>
+<script>
+    const item1 = document.querySelector('#item1')
+    item1.addEventListener('click', () => item1.style.textDecoration = 'line-through')
+
+    const btn = document.querySelector('#sBtn');
+    
+    const list = document.querySelector('#list');
+
+    btn.addEventListener('click', addItem)
+
+    function addItem() {
+        let newItem = document.querySelector('#input');
+        if(newItem.value.trim() === "") return
+        const li = document.createElement('li')
+        li.textContent = newItem.value;
+        li.addEventListener('click', () => li.style.textDecoration = 'line-through')
+        list.appendChild(li)
+        newItem.value = ''
+    }
+
+</script>
+
+</body>
+</html>

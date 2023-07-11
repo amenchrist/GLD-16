@@ -1,24 +1,49 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.css'
+import React,{ useState } from 'react';
+
 
 function App() {
+
+  const [ commented, setCommented ] = useState(false)
+
+  function submit() {
+    setCommented(true)
+  }
+
+  function ThankYou () {
+    return (
+      <h1>Thank you for your Comment</h1>
+    )
+  }
+
+  function CommentForm() {
+    return (
+      <>
+      <div style={divStyle}>
+        <h3>Leave a comment</h3>
+        <input type='text' placeholder='First Name' />
+        <br/>
+        <input type='email' placeholder='Email' />
+        <br/>
+        <textarea placeholder='Comments' />
+        <br/>
+        <button onClick={submit}>Submit</button>
+      </div> 
+    </>
+    )
+  }
+
+  const divStyle = {
+    padding: '50px'
+
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>  
+      <div style={divStyle}>
+      {commented? <ThankYou /> : <CommentForm /> }
+      </div> 
+    </>
   );
 }
 
